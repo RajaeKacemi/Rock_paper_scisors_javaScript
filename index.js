@@ -1,13 +1,13 @@
-/**  **/
+
 function getComputerChoice(){
-    var choice = ['Rock','Paper','Scissor'];
+    var choice = ['Rock','Paper','Scisor'];
     var randomChoice = choice[Math.floor(choice.length * Math.random())];
     return randomChoice;
 }
 
 game = () => {
 
-    let  playerChoice = prompt("Please enter your choice (Rock, Paper, Scissor)\n");
+    let  playerChoice = prompt("Please enter your choice (Rock, Paper, Scisor)\n");
     console.log("player choice : " + playerChoice);
 
     var computerChoice = getComputerChoice();
@@ -22,19 +22,19 @@ game = () => {
         case "You Win! Paper beats Rock" :
             return("Player");
 
-        case "You Win! Rock beats Scissor" :
+        case "You Win! Rock beats Scisor" :
             return("Player");
 
-        case "You Win! Scissor beats Paper" :
+        case "You Win! Scisor beats Paper" :
             return("Player");
 
-        case "You Lose! Paper beats Rock" :
+        case "You Lose! Paper beats Rock hello" :
             return("Computer");
 
-        case "You Lose! Rock beats Scissor" :
+        case "You Lose! Rock beats Scisor" :
             return("Computer");
 
-        case "You Lose! Scissor beats paper" :
+        case "You Lose! Scisor beats paper" :
             return("Computer");
 
         default : 
@@ -48,25 +48,25 @@ function playRound(playerSelection, computerSelection){
         console.log("## You Win! Paper beats Rock ##");
         return("You Win! Paper beats Rock");
     }
-    else if(playerSelection.toUpperCase() === "ROCK" && computerSelection.toUpperCase() === "SCISSOR"){
+    else if(playerSelection.toUpperCase() === "ROCK" && computerSelection.toUpperCase() === "SCISOR"){
         console.log("## You Win! Rock beats Scissor ##");
-        return("You Win! Rock beats Scissor");  
+        return("You Win! Rock beats Scisor");  
     }
-    else if(playerSelection.toUpperCase() === "SCISSOR" && computerSelection.toUpperCase() === "PAPER"){
-        console.log("## You Win! Scissor beats Paper ##");
-        return("You Win! Scissor beats Paper");
+    else if(playerSelection.toUpperCase() === "SCISOR" && computerSelection.toUpperCase() === "PAPER"){
+        console.log("## You Win! Scisor beats Paper ##");
+        return("You Win! Scisor beats Paper");
     }
     else if (computerSelection.toUpperCase() === "PAPER" && playerSelection.toUpperCase()=== "ROCK"){
         console.log("## You Lose! Paper beats Rock ##");
         return("You Lose! Paper beats Rock");
     }
-    else if(computerSelection.toUpperCase() === "ROCK" && playerSelection.toUpperCase() === "SCISSOR"){
-        console.log("## You Lose! Rock beats Scissor ##");
+    else if(computerSelection.toUpperCase() === "ROCK" && playerSelection.toUpperCase() === "SCISOR"){
+        console.log("## You Lose! Rock beats Scisor ##");
         return("You Lose! Rock beats Scissor");
     }
-    else if(computerSelection.toUpperCase() === "SCISSOR" && playerSelection.toUpperCase() === "PAPER"){
-        console.log("## You Lose! Scissor beats paper ##");
-        return("You Lose! Scissor beats paper");
+    else if(computerSelection.toUpperCase() === "SCISOR" && playerSelection.toUpperCase() === "PAPER"){
+        console.log("## You Lose! Scisor beats paper ##");
+        return("You Lose! Scisor beats paper");
 
     }
     else{
@@ -79,12 +79,12 @@ function playRound(playerSelection, computerSelection){
 let PlayerScoore = 0;
 let ComputerScoore = 0;
 
-let winner = game();
+let winner1 = game();
 
-if(winner.toUpperCase() === "PLAYER"){
+if(winner1.toUpperCase() === "PLAYER"){
     PlayerScoore++;
 }
-else if(winner.toUpperCase() === "COMPUTER"){
+else if(winner1.toUpperCase() === "COMPUTER"){
     ComputerScoore++;
 }
 
@@ -124,6 +124,6 @@ else if(winner5.toUpperCase() === "COMPUTER"){
 }
 
 
-console.log("THE RESULT OF GAME : ** Rock Paper Scisors **");
+console.log("THE RESULT OF GAME : ** Rock Paper Scisor **");
 console.log("YOUR SCORE : " + PlayerScoore);
 console.log("COMPUTER SCORE : " + ComputerScoore);
